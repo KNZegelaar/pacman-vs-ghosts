@@ -34,7 +34,7 @@ public class DepthFirstSearch {
 
         if (startIndex == targetIndex) {
 
-            return new int[]{startIndex, targetIndex};1
+            return new int[]{startIndex, targetIndex};
         }
 
         N target = dfs(startNode, targetNode, lastMoveMade, 1300);
