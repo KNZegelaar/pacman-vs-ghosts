@@ -40,9 +40,9 @@ public class MyPacMan extends Controller<MOVE>
 		if(goEatGhost != null) return goEatGhost;
 
 		//AStar
-//		AStar aStar = new AStar();
-//		aStar.createGraph(game.getCurrentMaze().graph);
-//		int[] path = aStar.computePathsAStar(current,target, game);
+		AStar aStar = new AStar();
+		aStar.createGraph(game.getCurrentMaze().graph);
+		int[] path = aStar.computePathsAStar(current,target, game);
 
 		//Dijkstra
 //		Dijkstra dijkstra = new Dijkstra();
@@ -50,9 +50,9 @@ public class MyPacMan extends Controller<MOVE>
 //		int[] path = dijkstra.computePathsDijkstra(current, target, game);
 
 //		//DFS
-		DepthFirstSearch dfs = new DepthFirstSearch();
-		dfs.createGraph(game.getCurrentMaze().graph);
-		int[] path = dfs.computeDFSPath(current, target, game.getPacmanLastMoveMade());
+//		DepthFirstSearch dfs = new DepthFirstSearch();
+//		dfs.createGraph(game.getCurrentMaze().graph);
+//		int[] path = dfs.computeDFSPath(current, target, game.getPacmanLastMoveMade());
 
 		System.out.print("TARGET: " + target + " --- ");
 		System.out.print("CURRENT: " + current + " ");

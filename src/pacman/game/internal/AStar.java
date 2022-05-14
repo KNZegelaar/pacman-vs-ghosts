@@ -47,7 +47,9 @@ public class AStar
         ArrayList<N> closed = new ArrayList<N>();
 
         start.pathCost = 0;
-        start.heuristicDistance = game.getShortestPathDistance(start.index, target.index);
+        //start.heuristicDistance = game.getShortestPathDistance(start.index, target.index);
+		//start.heuristicDistance = game.getEuclideanDistance(start.index, target.index);
+		start.heuristicDistance = game.getManhattanDistance(start.index, target.index);
 
         start.reached=lastMoveMade;
 
